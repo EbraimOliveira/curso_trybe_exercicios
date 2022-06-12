@@ -57,23 +57,33 @@
       .pictures {
         border-radius: 50%;
       }
+      .button {
+        background-color: rgba(222, 139, 222, 0.6);
+        color: crimson;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
       #main {
         color: yellow;
         font-size: 3rem;
       }
-      #teste {
-        border-radius: 30% 12% 0% 50%;
+      #dog-img {
+        border-radius: 50% 25% 7%;
       }
     </style>
   </head>
   <body>
     <h1 id="main">Sua carreira de sucesso em tecnologia começa aqui. Agora</h1>
     <img
-      id="teste"
+      id="dog-img"
       src="/imagens/dog_louco.jpeg"
       alt="Imagem aleatória para testar propriedades visuais"
-      width="400px"
+      width="300px"
     />
+    <br /><br /><br />
+
+    <a class="button" href="#goro"> Imagem do Goro brabão</a>
 
     <p>
       Com atividades presenciais e online, mentorias individuais e desafios
@@ -145,14 +155,15 @@
       <li>Último tópico <strong>desta lista.</strong></li>
     </ul>
 
-    <img src="/imagens/Goro.png" alt="GORO! GORO!" width="500px" />
+    <img id="goro" src="/imagens/Goro.png" alt="GORO! GORO!" width="500px" />
     <h4>Quer saber mais ?</h4>
     <a href="http://google.com/search?q=trybe" target="_blank">
       Pesquisa no Google
     </a>
-    <br />
+    <br /><br /><br />
 
     <a
+      class="button"
       href="http://127.0.0.1:5500/replicando_pagina_trybe_HTML_CSS/replicando_pagina_trybe.html#main"
     >
       Título</a
