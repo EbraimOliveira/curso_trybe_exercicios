@@ -1,0 +1,54 @@
+<style>
+      body {
+        font-family: Montserrat, sans-serif;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+        color: rgb(9, 41, 128);
+      }
+      h4 {
+        font-family: "Press Start 2P", cursive;
+        color: brown;
+      }
+      a {
+        color: #FFC0C7!;
+      }
+      .trybe-green {
+        color: #2fc18c;
+      }
+      .descricao {
+        color: black;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        letter-spacing: normal;
+      }
+      ul {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 10px;
+        font-weight: 100;
+        line-height: 50px;
+        letter-spacing: -5;
+      }
+      .pictures {
+        border-radius: 50%;
+      }
+      .button {
+        background-color: rgba(222, 139, 222, 0.6);
+        color: crimson;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
+      #main {
+        color: yellow;
+        font-size: 3rem;
+      }
+      #dog-img {
+        border-radius: 50% 25% 7%;
+      }
+    </style>
