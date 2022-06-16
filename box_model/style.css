@@ -1,20 +1,8 @@
-h1,
-p,
-li {
-  text-align: center;
+div:hover {
+  border-width: 3px;
+  border-color: green;
+  border-style: double;
 }
-li:active {
-  font-size: 18px;
-}
-ol li:hover {
-  background-color: black;
-  color: antiquewhite;
-}
-ul li:active {
-  font-family: "Press Start 2P";
-}
-
-ol,
-ul {
-  list-style: none;
+body div:first-child {
+  color: aliceblue;
 }
