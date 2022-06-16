@@ -97,15 +97,26 @@ a {
   margin: auto;
   padding: 5px;
 }
-#pe {
-  border: 2px solid red;
+#pes {
+  background-color: rgb(207, 252, 237);
+  list-style: none;
 }
-.bottom {
-  margin: 80px 20px 50px 80px;
-  border: 2px solid green;
-  width: 30%;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 3em;
-  padding: 30px;
+.pe-esquerdo {
+  float: left;
+  padding: 10em;
+  text-align: left;
+}
+.pe-direito {
+  float: right;
+  position: absolute;
+  z-index: 1;
+  padding: 100px 550px 50px;
+}
+#grave {
+  clear: both;
+  text-align: center;
+  line-height: 2em;
+}
+#nucleo {
+  background-color: blue;
 }
