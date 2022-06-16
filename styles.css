@@ -1,54 +1,111 @@
-<style>
-      body {
-        font-family: Montserrat, sans-serif;
-      }
+* {
+  margin: 0ch;
+  padding: 0ch;
+}
 
-      p,
-      li {
-        font-size: 16px;
-        color: rgb(9, 41, 128);
-      }
-      h4 {
-        font-family: "Press Start 2P", cursive;
-        color: brown;
-      }
-      a {
-        color: #FFC0C7!;
-      }
-      .trybe-green {
-        color: #2fc18c;
-      }
-      .descricao {
-        color: black;
-        font-size: 15px;
-        line-height: 20px;
-        font-weight: 600;
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        letter-spacing: normal;
-      }
-      ul {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 10px;
-        font-weight: 100;
-        line-height: 50px;
-        letter-spacing: -5;
-      }
-      .pictures {
-        border-radius: 50%;
-      }
-      .button {
-        background-color: rgba(222, 139, 222, 0.6);
-        color: crimson;
-        padding: 10px 20px;
-        border-radius: 25px;
-        text-decoration: none;
-      }
-      #main {
-        color: yellow;
-        font-size: 3rem;
-      }
-      #dog-img {
-        border-radius: 50% 25% 7%;
-      }
-    </style>
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+p,
+li {
+  font-size: 16px;
+  color: rgb(208, 81, 237);
+}
+h4 {
+  font-family: "Press Start 2P", cursive;
+  color: brown;
+}
+.trybe-green {
+  color: #2fc18c;
+}
+.descricao {
+  color: black;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: normal;
+}
+ul {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 50px;
+  letter-spacing: -5;
+}
+.pictures {
+  border-radius: 50%;
+}
+.button {
+  background-color: rgba(222, 139, 222, 0.6);
+  color: rgb(240, 197, 206);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+#main {
+  color: yellow;
+  font-size: 2em;
+  margin: 1em;
+}
+
+.cabeca {
+  background-image: url(/imagens/paisagem.jpg);
+  background-size: cover;
+  background-position: 100% 35%;
+  padding: 60px 30px 40px;
+}
+#cranio {
+  max-width: 630px;
+}
+#cranio p,
+a {
+  margin: 2em;
+  color: rgb(54, 191, 229);
+}
+#cranio a:hover {
+  font-size: 18px;
+}
+#cranio p {
+  width: 70%;
+}
+#top {
+  padding: 5em;
+  text-align: center;
+}
+#meio {
+  text-align: center;
+}
+#topdown {
+  width: 70%;
+  margin: auto;
+}
+#topdown p {
+  margin: 2em;
+}
+.char {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.char p {
+  width: 40%;
+  margin: auto;
+  padding: 5px;
+}
+#pe {
+  border: 2px solid red;
+}
+.bottom {
+  margin: 80px 20px 50px 80px;
+  border: 2px solid green;
+  width: 30%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 3em;
+  padding: 30px;
+}
