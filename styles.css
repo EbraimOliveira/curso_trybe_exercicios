@@ -99,7 +99,6 @@ a {
 }
 #pes {
   background-color: rgb(207, 252, 237);
-  list-style: none;
 }
 .pe-esquerdo {
   float: left;
@@ -119,4 +118,7 @@ a {
 }
 #nucleo {
   background-color: blue;
+}
+ul {
+  list-style: none;
 }
