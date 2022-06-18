@@ -27,3 +27,23 @@ li em {
 .color {
   background-color: pink;
 }
+.bonus1:hover {
+  font-weight: bold;
+  color: orange;
+}
+.bonus2:hover {
+  font-weight: bold;
+  color: green;
+}
+.bonus3:hover {
+  font-weight: bold;
+  color: black;
+}
+.bonus4:hover {
+  font-weight: bold;
+  color: yellow;
+}
+.bonus5:hover {
+  font-weight: bold;
+  color: green;
+}
