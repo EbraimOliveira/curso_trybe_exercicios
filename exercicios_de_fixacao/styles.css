@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Kdam Thmor Pro";
+  color: orange;
+  padding-top: 85px;
+  padding-right: 55%;
+  padding-bottom: 7%;
+  background-image: url(/imagens/Bixo.jpg);
+  background-size: cover;
+  background-position: 100% 10%;
+}
