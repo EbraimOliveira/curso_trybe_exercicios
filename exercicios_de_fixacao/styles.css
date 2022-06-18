@@ -13,4 +13,21 @@ header {
   background-image: url(/imagens/Bixo.jpg);
   background-size: cover;
   background-position: 100% 10%;
+  font-weight: bold;
+}
+nav {
+  background-color: orange;
+  border: 1px solid blue;
+}
+ul li {
+  display: inline-block;
+  font-size: 20px;
+  width: 15%;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+li:hover {
+  font-size: 22px;
 }
