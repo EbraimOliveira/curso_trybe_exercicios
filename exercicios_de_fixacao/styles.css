@@ -77,11 +77,23 @@ p {
 }
 #eye {
   float: right;
-  margin: 5px 0px 10px 10px;
+  margin: 10px 0px 10px 10px;
   padding: 0%;
   border: 2px solid orange;
   width: 250px;
+  border-radius: 15px;
 }
 #remendo {
   text-indent: 0ch;
+}
+#centralizar {
+  margin-left: 268px;
+}
+#punch {
+  padding-left: 90px;
+  width: 83%;
+}
+#gif {
+  border: 2px solid orange;
+  border-radius: 15px;
 }
