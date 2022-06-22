@@ -70,7 +70,7 @@ if (pecaDeXadrez === "peao") {
 } else if (pecaDeXadrez === "dama") {
   console.log("em qualquer direção, quantas casas quiser");
 } else if (pecaDeXadrez === "rei") {
-  console.log(toUpperCase("em qualquer direção, de uma em uma"));
+  console.log("em qualquer direção, de uma em uma");
 } else {
   console.log("erro");
 }
@@ -130,4 +130,19 @@ if (valorDeCusto < 0 || valorDeVenda < 0) {
   const valorDeCustoTotal = valorDeCusto + valorDeCusto * 0.2;
   const lucro = valorDeVenda - valorDeCustoTotal;
   console.log(lucro * 1000);
+}
+
+//Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.//
+
+const salarioBruto = 1000.0;
+let salarioBase;
+
+if (salarioBruto <= 1556.94) {
+  salarioBase = salarioBruto - salarioBruto * 0.08;
+} else if (salarioBruto <= 2594.92) {
+  salarioBase = salarioBruto - salarioBruto * 0.09;
+} else if (salarioBruto <= 5189.82) {
+  salarioBase = salarioBruto - salarioBruto * 0.11;
+} else {
+  salarioBase = salarioBruto - 570.88;
 }
