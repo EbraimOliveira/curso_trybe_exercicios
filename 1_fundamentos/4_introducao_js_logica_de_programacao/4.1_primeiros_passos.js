@@ -134,8 +134,9 @@ if (valorDeCusto < 0 || valorDeVenda < 0) {
 
 //Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.//
 
-const salarioBruto = 1000.0;
+const salarioBruto = 4500.0;
 let salarioBase;
+let valorLiquido;
 
 if (salarioBruto <= 1556.94) {
   salarioBase = salarioBruto - salarioBruto * 0.08;
@@ -146,3 +147,17 @@ if (salarioBruto <= 1556.94) {
 } else {
   salarioBase = salarioBruto - 570.88;
 }
+
+if (salarioBase <= 1903.98) {
+  valorLiquido = salarioBase;
+} else if (salarioBase <= 2826.65) {
+  valorLiquido = salarioBase - (salarioBase * 0.075 - 142.8);
+} else if (salarioBase <= 3751.05) {
+  valorLiquido = salarioBase - (salarioBase * 0.15 - 354.8);
+} else if (salarioBase <= 4664.68) {
+  valorLiquido = salarioBase - (salarioBase * 0.225 - 636.13);
+} else {
+  valorLiquido = salarioBase - (salarioBase * 0.275 - 869.36);
+}
+
+console.log(valorLiquido);
