@@ -118,3 +118,16 @@ if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
 } else {
   console.log(false);
 }
+
+//Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.//
+
+const valorDeCusto = 600;
+const valorDeVenda = 70;
+
+if (valorDeCusto < 0 || valorDeVenda < 0) {
+  console.log("erro");
+} else {
+  const valorDeCustoTotal = valorDeCusto + valorDeCusto * 0.2;
+  const lucro = valorDeVenda - valorDeCustoTotal;
+  console.log(lucro * 1000);
+}
