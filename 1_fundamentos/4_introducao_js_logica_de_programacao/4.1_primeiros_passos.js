@@ -1,4 +1,4 @@
-//operadores aritméticos//
+//Operadores aritméticos.//
 
 const a = 5;
 const b = 8;
@@ -11,8 +11,8 @@ let modulo = a % b;
 
 console.log(soma, subtração, mutiplicacao, divisao, modulo);
 
-//Operadores de comparação//
-//Faça um programa que retorne o maior de três números//
+//Operadores de comparação.//
+//Faça um programa que retorne o maior de três números.//
 
 const a = 5;
 const b = 8;
@@ -28,7 +28,7 @@ if (a < b && c < b) {
   console.log(b);
 }
 
-//Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negativo" se for negativo e "zero" caso contrário//
+//Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negativo" se for negativo e "zero" caso contrário.//
 
 const a = 0;
 
@@ -41,7 +41,7 @@ if (a === 0) {
   console.log("negativo");
 }
 
-//🚀 Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro//
+//🚀 Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.//
 
 const anguloA = 30;
 const anguloB = 100;
@@ -53,4 +53,24 @@ if (anguloA <= 0 || anguloB <= 0 || anguloC <= 0) {
   console.log(true);
 } else {
   console.log(false);
+}
+
+//Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.//
+
+let pecaDeXadrez = "torre";
+
+if (pecaDeXadrez === "peao") {
+  console.log("uma em um casa, em linha reta");
+} else if (pecaDeXadrez === "torre") {
+  console.log("em linhas ou colunas");
+} else if (pecaDeXadrez === "bispo") {
+  console.log("em diagonal");
+} else if (pecaDeXadrez === "cavalo") {
+  console.log("em forma de L");
+} else if (pecaDeXadrez === "dama") {
+  console.log("em qualquer direção, quantas casas quiser");
+} else if (pecaDeXadrez === "rei") {
+  console.log("em qualquer direção, de uma em uma");
+} else {
+  console.log("erro");
 }
