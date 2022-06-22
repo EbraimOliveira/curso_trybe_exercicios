@@ -57,7 +57,7 @@ if (anguloA <= 0 || anguloB <= 0 || anguloC <= 0) {
 
 //Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.//
 
-let pecaDeXadrez = "torre";
+let pecaDeXadrez = "rei";
 
 if (pecaDeXadrez === "peao") {
   console.log("uma em um casa, em linha reta");
@@ -70,7 +70,27 @@ if (pecaDeXadrez === "peao") {
 } else if (pecaDeXadrez === "dama") {
   console.log("em qualquer direção, quantas casas quiser");
 } else if (pecaDeXadrez === "rei") {
-  console.log("em qualquer direção, de uma em uma");
+  console.log(toUpperCase("em qualquer direção, de uma em uma"));
 } else {
   console.log("erro");
+}
+
+//Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.//
+
+const notaEmPorcentagem = 120;
+
+if (notaEmPorcentagem < 0 || notaEmPorcentagem > 100) {
+  console.log("erro");
+} else if (notaEmPorcentagem >= 90) {
+  console.log("A");
+} else if (notaEmPorcentagem >= 80) {
+  console.log("B");
+} else if (notaEmPorcentagem >= 70) {
+  console.log("C");
+} else if (notaEmPorcentagem >= 60) {
+  console.log("D");
+} else if (notaEmPorcentagem >= 50) {
+  console.log("E");
+} else {
+  console.log("F");
 }
