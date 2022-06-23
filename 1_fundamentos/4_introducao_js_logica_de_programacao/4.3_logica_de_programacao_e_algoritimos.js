@@ -17,3 +17,15 @@ for (let i = palavra.length - 1; i >= 0; i -= 1) {
   palavraInvertida += palavra[i];
 }
 console.log(palavraInvertida);
+
+//3 -Retora a maior e a menor.
+
+let array = ["java", "javascript", "python", "html", "css"];
+let maior = array[0];
+
+for (let i = 1; i < array.length; i += 1) {
+  if (maior.length < array[i].length) {
+    maior = array[i];
+  }
+}
+console.log(maior);
