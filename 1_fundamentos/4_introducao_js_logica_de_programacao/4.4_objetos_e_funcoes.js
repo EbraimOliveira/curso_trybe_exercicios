@@ -2,14 +2,30 @@
 
 // let objetoTeste = {
 //   nome: "Ebraim",
-//  ultimoNome: "Oliveira",
-//  idade: 35,
+//   ultimoNome: "Oliveira",
+//   idade: 35,
 //   gostaDe: {
 //     esporte: "climb",
 //     mulher: "loira",
-//     3: "numero",
+//     listaDeJogos: [
+//       {
+//         favorito: "eldritch",
+//         popular: "dixit",
+//         rancor: "coupe",
+//       },
+//       {
+//         comida: "sushi",
+//         bebida: "alcool",
+//       },
+//     ],
 //   },
 // };
+
+// let numeroDeElementosNoArrayDoObjeto = Object.keys(
+//   objetoTeste.gostaDe.listaDeJogos
+// ).length;
+
+// console.log(numeroDeElementosNoArrayDoObjeto);
 
 // console.log(objetoTeste.nome, objetoTeste["idade"], objetoTeste.gostaDeClimb);
 
@@ -53,33 +69,15 @@
 //     " " +
 //     player["age"] +
 //     " " +
-//     "de" +
-//     " " +
-//     "idade" +
-//     " " +
-//     "foi" +
-//     " " +
-//     "a" +
-//     " " +
-//     "melhor" +
-//     " " +
-//     "nos" +
-//     " " +
-//     "anos" +
+//     "de idade foi a melhor nos anos+
 //     " " +
 //     player.bestInTheWorld["years"] +
 //     " " +
-//     "e" +
-//     " " +
-//     "ganhou" +
+//     "e ganhou" +
 //     " " +
 //     player["medals"].golden +
 //     " " +
-//     "medalhas" +
-//     " " +
-//     "de" +
-//     " " +
-//     "ouro"
+//     "medalhas de ouro"
 // );
 
 // -----------------------------------------------------------------------------------------------
@@ -156,3 +154,68 @@
 // }
 
 //--------------------------------------------------------------------------------------------
+
+//Use o código abaixo para resolver os exercícios até o 8.
+
+// let leitor = {
+//   nome: "Julia",
+//   sobrenome: "Pessoa",
+//   idade: 21,
+//   livrosFavoritos: [
+//     {
+//       titulo: "O Pior Dia de Todos",
+//       autor: "Daniela Kopsch",
+//       editora: "Tordesilhas",
+//     },
+//   ],
+// };
+
+//🚀 6 - Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: "O livro favorito de Julia Pessoa se chama 'O Pior Dia de Todos'".
+
+// console.log(
+//   "O livro favorito de" +
+//     " " +
+//     leitor.nome +
+//     " " +
+//     leitor["sobrenome"] +
+//     " " +
+//     "se chama" +
+//     " " +
+//     leitor.livrosFavoritos[0].titulo
+// );
+
+//🚀 7 -Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a esta chave um objeto contendo as seguintes informações:
+// {
+//   titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//   autor: 'JK Rowling',
+//   editora: 'Rocco',
+// }
+
+// leitor.livrosFavoritos.push({
+//   titulo: "Harry Potter e o Prisioneiro de Azkaban",
+//   autor: "JK Rowling",
+//   editora: "Rocco",
+// });
+
+// console.log(leitor.livrosFavoritos[1].autor);
+
+//🚀 8 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
+
+// ERRADO:
+// console.log(
+//   leitor.nome +
+//     " " +
+//     "tem 2 livros favoritos," +
+//     " " +
+//     leitor.livrosFavoritos[0].titulo +
+//     " " +
+//     "e" +
+//     " " +
+//     leitor.livrosFavoritos[1].titulo
+// );
+
+//CORRETO:
+// let size = Object.keys(leitor.livrosFavoritos).length;
+
+// // console.log(leitor.nome + " " + "tem " + size + " " + "livros favoritos");
+// console.log(size);
