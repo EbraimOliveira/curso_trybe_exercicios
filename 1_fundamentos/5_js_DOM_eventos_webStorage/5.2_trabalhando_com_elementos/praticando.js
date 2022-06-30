@@ -1,3 +1,5 @@
+//BUSCANDO ELEMENTOS:
+
 // 01--Acesse o elemento elementoOndeVoceEsta.
 // 02--Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
 // 03--Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
@@ -35,3 +37,30 @@ document.getElementById("elementoOndeVoceEsta").nextElementSibling;
 
 //08
 document.getElementById("pai").children[2];
+
+//CRIANDO ELEMENTOS:
+
+// 01--Crie um irmão para elementoOndeVoceEsta.
+// Extra--Criar o elemento proposto no 01 logo abaixo do Node Pai.
+// 02--Crie um filho para elementoOndeVoceEsta.
+// 03--Crie um filho para primeiroFilhoDoFilho.
+// Extra02-- Preencha a ol criada no 03 com li's.
+// 04--A partir desse filho criado, acesse terceiroFilho.
+
+//01
+let criaDiv = document.createElement("div");
+document.getElementById("pai").appendChild(criaDiv);
+
+//02
+let criaFilho = document.createElement("p");
+document.getElementById("elementoOndeVoceEsta").appendChild(criaFilho);
+
+//03
+let criaBisneto = document.createElement("ol");
+document.getElementById("primeiroFilhoDoFilho").appendChild(criaBisneto);
+
+//04
+console.log(
+  document.getElementsByTagName("ol")[0].parentElement.parentElement
+    .nextElementSibling
+);
