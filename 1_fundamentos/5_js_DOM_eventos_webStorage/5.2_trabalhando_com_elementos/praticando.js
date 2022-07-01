@@ -24,13 +24,10 @@ document.getElementById("primeiroFilhoDoFilho").textContent = "texto qualquer";
 document.getElementById("pai").firstElementChild;
 
 //05
-document.getElementById("elementoOndeVoceEsta").previousElementSibling
-  .textContent;
+document.getElementById("elementoOndeVoceEsta").previousElementSibling;
 
 //06
-const variavel = document.getElementById("elementoOndeVoceEsta").nextSibling
-  .nodeValue;
-console.log(variavel);
+const variavel = document.getElementById("elementoOndeVoceEsta").nextSibling;
 
 //07
 document.getElementById("elementoOndeVoceEsta").nextElementSibling;
@@ -64,3 +61,38 @@ console.log(
   document.getElementsByTagName("ol")[0].parentElement.parentElement
     .nextElementSibling
 );
+
+// REMOVENDO ELEMENTOS:
+
+//01--Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+const paiDeTodos = document.getElementById(pai');
+
+const prole = paiDeTodos.childNodes;
+console.log(prole);
+for (let index = 0; index < prole.length; index += 1) {
+  if (
+    prole[index] !== document.getElementById("pai") &&
+    prole[index] !== document.getElementById("elementoOndeVoceEsta") &&
+    prole[index] !== document.getElementById("primeiroFilhoDoFilho")
+  ) {
+    paiDeTodos.removeChild(prole[index]);
+  }
+}
+
+// let filhosDoPai = document.getElementById("pai").childNodes;
+// for (let i = filhosDoPai.length - 1; i >= 0; i -= 1) {
+//   let elementoNoIndice = filhosDoPai[i];
+//   if (elementoNoIndice.id !== "elementoOndeVoceEsta") {
+//     elementoNoIndice.remove();
+//   }
+// }
+// // Não Funciona:
+// let filhosDoPai = document.getElementById("pai").childNodes;
+// for (let i = 0; i < filhosDoPai.length; i += 1) {
+//   let elementoNoIndice = filhosDoPai[i];
+//   if (elementoNoIndice.id !== "elementoOndeVoceEsta") {
+//     elementoNoIndice.remove();
+//   }
+// }
+// edited;

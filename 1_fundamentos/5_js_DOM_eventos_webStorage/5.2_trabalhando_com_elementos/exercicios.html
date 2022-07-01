@@ -57,7 +57,86 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      //--Exercício 01
+      const varBody = document.body;
+      const varH1 = document.createElement("h1"); // Cria o elemento  a ser inserido;
+      // document.getElementsByTagName("h1")[0].innerText = "Exercício 5.2";
+      //Uma vez criado e elemento é possivel atribuir caracteristica chamando direto a variável criada, como feito abaixo:
+      varH1.innerText = "Exercício 5.2";
+
+      varBody.appendChild(varH1);
+
+      //--Exercício 02
+      const varMain = document.createElement("main");
+      varMain.className = "main-content"; // É boa prática atribuir características ao elemento criado antes de appendar.
+      varBody.appendChild(varMain); // Depois de criar um elemento e atribuir características basta appendalo.
+
+      //--Exercício 03
+      const varSection = document.createElement("section");
+      varSection.className = "center-content";
+      varMain.appendChild(varSection);
+
+      //--Exercício 04
+      const varP = document.createElement("p");
+      varP.innerHTML = "Completando exercício";
+      varSection.appendChild(varP);
+
+      //--Exercício 05
+      const varSection2 = document.createElement("section");
+      varSection2.className = "left-content";
+      varMain.appendChild(varSection2); // Para adicionar um filho é preciso criar um novo elemento, mesmo se já tiver criado outro igual antes.
+
+      //--Exercício 06
+      const varSection3 = document.createElement("section");
+      varMain.appendChild(varSection3);
+      varSection3.className = "right-content";
+
+      //--Exercício 07
+      const varImg = document.createElement("img");
+      varImg.src = "https://picsum.photos/200"; // É possivel atribuir um arquivo direto ao elemento criado da mesma forma que um classList.
+      varImg.className = "small-image";
+      varSection2.appendChild(varImg);
+
+      //--Exercício 08
+      let numerosAteDez = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      const varUl = document.createElement("ul");
+      varSection3.appendChild(varUl);
+
+      for (let index = 0; index < numerosAteDez.length; index += 1) {
+        const varLi = document.createElement("li");
+        varLi.innerHTML = numerosAteDez[index];
+        varUl.appendChild(varLi);
+      }
+
+      //--Exercício 09
+      for (let index = 0; index <= 2; index += 1) {
+        const varH3 = document.createElement("h3");
+        varMain.appendChild(varH3);
+      }
+
+      //--Exercício 10
+      varH1.className = "title";
+
+      //--Exercício 11
+      for (index = 0; index < 3; index += 1) {
+        document.getElementsByTagName("h3")[index].className = "description";
+      }
+
+      //--Exercício 12
+      const removerVariavel =
+        document.getElementsByClassName("left-content")[0];
+      varMain.removeChild(removerVariavel);
     </script>
   </body>
 </html>
