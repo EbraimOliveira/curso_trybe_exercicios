@@ -88,8 +88,8 @@
 
       //--Exercício 06
       const varSection3 = document.createElement("section");
-      varMain.appendChild(varSection3);
       varSection3.className = "right-content";
+      varMain.appendChild(varSection3);
 
       //--Exercício 07
       const varImg = document.createElement("img");
@@ -137,6 +137,23 @@
       const removerVariavel =
         document.getElementsByClassName("left-content")[0];
       varMain.removeChild(removerVariavel);
+
+      //--Exercicio 13
+      const centralizar = document.getElementsByClassName("right-content")[0];
+      centralizar.style.marginRight = "auto";
+
+      //--Exercício 14
+      varMain.style.backgroundColor = "green";
+
+      //--Exercício 15
+      // const listaDeNumeros = varBody.children;
+
+      // for (index = children.length; index >= children.length - 2; index -= 1) {
+      //   listaDeNumeros.remove();
+      // }
+      const ul = document.getElementsByTagName("ul")[0];
+      ul.lastChild.remove();
+      ul.lastChild.remove();
     </script>
   </body>
 </html>
