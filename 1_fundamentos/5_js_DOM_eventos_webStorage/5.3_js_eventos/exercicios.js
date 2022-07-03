@@ -155,3 +155,36 @@ for (let i = 0; i < arrayDeDias.length; i += 1) {
     event.target.style.fontSize = "";
   });
 }
+
+// 🚀 Exercício 7:
+// Implemente uma função que adicione uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function criaTarefa(descricaoDaTarefa) {
+  const tarefa = document.createElement("span");
+  tarefa.innerText = descricaoDaTarefa;
+  const paiDaTarefa = document.querySelector(".my-tasks");
+  paiDaTarefa.appendChild(tarefa);
+}
+criaTarefa("entao funcionou");
+
+// 🚀 Exercício 8:
+// *Implemente uma função que adicione uma legenda com cor para a tarefa.
+// *Essa função deverá receber como parâmetro uma string ('cor')
+// *Criar dinamicamente um elemento de tag <div> com a classe 'task'.
+// *O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+// *O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function adicionLegenda(cor) {
+  const bolinhaColorida = document.createElement("div");
+  bolinhaColorida.classList.add("task");
+  bolinhaColorida.style.background = cor;
+  const paiDaTarefa = document.querySelector(".my-tasks");
+  paiDaTarefa.appendChild(bolinhaColorida);
+}
+adicionLegenda("pink");
+
+// 🚀 Exercício 9:
+// Implemente uma função que selecione uma tarefa.
+// Adicione um evento que ao clicar no elemento com a tag <div> referente à cor da sua tarefa, atribua a esse elemento a classe task selected, ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja, essa tarefa está deixando de ser uma tarefa selecionada.
