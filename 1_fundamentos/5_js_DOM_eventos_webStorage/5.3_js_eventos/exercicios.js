@@ -21,6 +21,8 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
+//Variáveis:
+
 // Escreva seu código abaixo.
 
 // 🚀 Exercício 1:
@@ -62,3 +64,50 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
   umDia.innerText = decemberDaysList[index];
   diasDeDezembro.appendChild(umDia);
 }
+
+// 🚀 Exercício 2:
+// Implemente uma função que crie dinamicamente um botão com o nome "Feriados".
+// Sua função deve receber um parâmetro com a string 'Feriados'
+// Adicione a este botão a ID "btn-holiday"
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
+
+function criaBotao(nomeDoBotao, idDoBotao) {
+  const novoBotao = document.createElement("button");
+  novoBotao.innerText = nomeDoBotao;
+  novoBotao.id = idDoBotao;
+  const divDosBotoes = document.getElementsByClassName("buttons-container")[0];
+  divDosBotoes.appendChild(novoBotao);
+}
+criaBotao("feriado", "btn-holiday");
+
+// const botaoFeriado = document.getElementById("btn-holiday");
+// const divDosBotoes = document.getElementsByClassName("buttons-container")[0];
+// divDosBotoes.appendChild(novoBotao);
+// *** Não é possivel apendar o elemento criado fora da função porque o que foi definido dentro da função só existe enquanto a função esta sendo execultada
+
+// 🚀 Exercício 3:
+// Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
+// Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday"
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor "rgb(238,238,238)".
+
+const diasDeFeriado = document.getElementsByClassName("holiday");
+
+function mudaCor() {
+  for (let index = 0; index < diasDeFeriado.length; index += 1) {
+    if (diasDeFeriado[index].style.backgroundColor === "yellow") {
+      diasDeFeriado[index].style.backgroundColor = "rgb(238,238,238)";
+    } else {
+      diasDeFeriado[index].style.backgroundColor = "yellow";
+    }
+  }
+}
+
+const botaoDoFeriado = document.getElementById("btn-holiday");
+botaoDoFeriado.addEventListener("click", mudaCor);
+
+// 🚀 Exercício 4:
+// Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira". Sua função deve receber como parâmetro a string "Sexta-feira".
+// Adicione a esse botão o ID "btn-friday";
+// Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+
+criaBotao("Sexta-feira", "btn-friday");
