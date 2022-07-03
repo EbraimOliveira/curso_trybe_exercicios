@@ -1,7 +1,7 @@
 const firstLi = document.getElementById("first-li");
 const secondLi = document.getElementById("second-li");
 const thirdLi = document.getElementById("third-li");
-const input = document.getElementById("input");
+const caxinha = document.getElementById("input");
 const myWebpage = document.getElementById("my-spotrybefy");
 
 // 1. Copie esse arquivo e edite apenas ele;
@@ -15,7 +15,6 @@ function ergueEabaixa(evento) {
   const primeiroTechEncontrado = document.querySelector(".tech");
   primeiroTechEncontrado.classList.remove("tech");
   evento.target.classList.add("tech");
-  input.value = "";
 }
 
 firstLi.addEventListener("click", ergueEabaixa);
@@ -25,14 +24,21 @@ thirdLi.addEventListener("click", ergueEabaixa);
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech'
 
-input.addEventListener("input", function (evento) {
-  const primeiraTecnologia = document.getElementsByTagName("li")[0];
-  primeiraTecnologia.innerText = evento.target.value;
+caxinha.addEventListener("input", function () {
+  const primeiraCaxinha = document.getElementsByTagName("li")[0];
+  primeiraCaxinha.innerText = caxinha.value;
 });
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
+
+myWebpage.addEventListener("dblclick", nat);
+function nat() {
+  window.location.replace(
+    "https://www.google.com/search?q=google&oq=google&aqs=chrome..69i57j69i60l2.5257j0j7&sourceid=chrome&ie=UTF-8"
+  );
+}
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
