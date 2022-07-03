@@ -178,13 +178,45 @@ criaTarefa("entao funcionou");
 function adicionLegenda(cor) {
   const bolinhaColorida = document.createElement("div");
   bolinhaColorida.classList.add("task");
-  bolinhaColorida.style.background = cor;
+  bolinhaColorida.style.backgroundColor = cor;
   const paiDaTarefa = document.querySelector(".my-tasks");
   paiDaTarefa.appendChild(bolinhaColorida);
 }
-adicionLegenda("pink");
+adicionLegenda("yellow");
+adicionLegenda("purple");
+adicionLegenda("black");
 
 // 🚀 Exercício 9:
 // Implemente uma função que selecione uma tarefa.
 // Adicione um evento que ao clicar no elemento com a tag <div> referente à cor da sua tarefa, atribua a esse elemento a classe task selected, ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja, essa tarefa está deixando de ser uma tarefa selecionada.
+
+const bolinhaDaTarefa = document.getElementsByClassName("task");
+console.log(bolinhaDaTarefa);
+for (let i = 0; i < bolinhaDaTarefa.length; i += 1) {
+  bolinhaDaTarefa[i].addEventListener("click", function () {
+    if (bolinhaDaTarefa[i].className !== "task selected") {
+      bolinhaDaTarefa[i].classList.add("selected");
+    } else {
+      bolinhaDaTarefa[i].classList.remove("selected");
+    }
+  });
+}
+
+// 🚀 Exercício 10:
+// Implemente uma função que atribua a cor da tarefa ao dia do calendário.
+// Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119)
+
+// const corSelecionada = document.getElementsByClassName("selected")[0];
+
+for (let index = 0; index < arrayDeDias.length; index += 1) {
+  arrayDeDias[index].addEventListener("click", function (event) {
+    const corSelecionada = document.getElementsByClassName("selected")[0];
+    if (event.target.style.color === corSelecionada.style.backgroundColor) {
+      event.target.style.color = "rgb(119, 119, 119)";
+    } else {
+      event.target.style.color = corSelecionada.style.backgroundColor;
+    }
+  });
+}
