@@ -111,3 +111,31 @@ botaoDoFeriado.addEventListener("click", mudaCor);
 // Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
 
 criaBotao("Sexta-feira", "btn-friday");
+const botaoSextouEstudando = document.getElementById("btn-friday");
+
+// 🚀 Exercício 5:
+// Implemente uma função que modifica o texto exibido nos dias que são Sexta-feira. Adicione ao botão "Sexta-feira" um evento de "click" e modifique o texto a ser exibido nos dias que são sextas-feiras.
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
+
+const sextasFeiras = document.getElementsByClassName("friday");
+const soTextos = [];
+for (let i = 0; i < sextasFeiras.length; i += 1) {
+  soTextos.push(sextasFeiras[i].innerText);
+}
+console.log(soTextos);
+
+//console.log(sextasFeiras);
+
+function mudaTexto() {
+  for (index = 0; index < soTextos.length; index += 1) {
+    const teste = sextasFeiras;
+    // [4, 11, 25 , 31]
+
+    if (teste[index].innerText !== "Estudar") {
+      teste[index].innerText = "Estudar";
+    } else {
+      teste[index].innerText = soTextos[index];
+    }
+  }
+}
+botaoSextouEstudando.addEventListener("click", mudaTexto);
