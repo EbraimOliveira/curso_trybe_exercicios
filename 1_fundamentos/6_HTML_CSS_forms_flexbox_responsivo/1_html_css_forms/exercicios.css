@@ -7,7 +7,7 @@
   background-color: yellow;
   border: 2px solid blue;
   border-radius: 3px;
-  width: 50%;
+  width: 43%;
   margin: 40px auto;
   padding: 50px;
   color: rgb(45, 5, 3);
@@ -17,7 +17,7 @@
   background-color: rgb(250, 23, 250);
   border: 1px solid black;
   border-radius: 3px;
-  width: 7%;
+  width: 9%;
   display: inline-block;
   padding: 10px;
   color: rgb(45, 5, 3);
@@ -32,4 +32,21 @@ input {
 #bruxo,
 #terror {
   margin-left: 10px;
+}
+
+#text {
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+.travel {
+  margin-bottom: 10px;
+}
+.send {
+  border: 1px solid blue;
+  display: inline-block;
+  width: 30%;
+  border-radius: 2px;
+  padding: 4px;
 }
