@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.formulary {
+  background-color: yellow;
+  border: 2px solid blue;
+  border-radius: 3px;
+  width: 50%;
+  margin: 40px auto;
+  padding: 50px;
+  color: rgb(45, 5, 3);
+}
+
+.settings label {
+  background-color: rgb(250, 23, 250);
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 7%;
+  display: inline-block;
+  padding: 10px;
+  color: rgb(45, 5, 3);
+}
+input {
+  border: 1px solid blue;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+#west,
+#bruxo,
+#terror {
+  margin-left: 10px;
+}
