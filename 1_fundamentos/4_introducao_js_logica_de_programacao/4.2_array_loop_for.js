@@ -117,17 +117,18 @@
 function randomNumbers(n) {
   let numbers = [];
   numbers.push(Math.floor(Math.random() * 60) + 1);
-
   while (numbers.length < n) {
     let numberDrown = Math.floor(Math.random() * 60) + 1;
-
-    for (let i = 0; i < numbers.length; i += 1) {
-      if (numberDrown !== numbers[i]) {
-        numbers.push(numberDrown);
+    let counter = 0;
+   for (let i = 0; i < numbers.length; i += 1) {
+      if (numberDrown === numbers[i]) { 
+        counter += 1;
       }
+    } 
+    if (counter ===0 ) {
+      numbers.push(numberDrown)
     }
   }
   console.log(numbers);
 }
-
-randomNumbers(12);
+randomNumbers(6);
