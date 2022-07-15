@@ -112,23 +112,35 @@
 //Desfio bonus apresentado na aula 4.2 - Array e Loop For.
 //Gerar um simulador de sorteios da mega-sena.
 
-// console.log(Math.floor(Math.random() * 60) + 1);
-
-function randomNumbers(n) {
-  let numbers = [];
-  numbers.push(Math.floor(Math.random() * 60) + 1);
-  while (numbers.length < n) {
+let myNumbers = [3, 11, 17, 20, 43, 48];
+let randomNumbers = [];
+let acertos = 0;
+  randomNumbers.push(Math.floor(Math.random() * 60) + 1);
+  while (randomNumbers.length < 6) {
     let numberDrown = Math.floor(Math.random() * 60) + 1;
     let counter = 0;
-   for (let i = 0; i < numbers.length; i += 1) {
-      if (numberDrown === numbers[i]) { 
+   for (let i = 0; i < randomNumbers.length; i += 1) {
+      if (numberDrown === randomNumbers[i]) { 
         counter += 1;
       }
     } 
     if (counter ===0 ) {
-      numbers.push(numberDrown)
+      randomNumbers.push(numberDrown)
     }
   }
-  console.log(numbers);
+
+for (let index = 0; index < myNumbers.length; index +=1) {
+  for (let index2 =0; index2 < randomNumbers.length; index2 +=1) {
+    if (myNumbers[index] === randomNumbers[index2]) {
+      acertos += 1;
+    }
+  }
 }
-randomNumbers(6);
+console.log(myNumbers);
+console.log(randomNumbers);
+console.log(acertos);
+
+
+
+
+

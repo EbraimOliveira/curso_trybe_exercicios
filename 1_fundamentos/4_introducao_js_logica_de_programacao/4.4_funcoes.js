@@ -12,18 +12,14 @@
 
 //Resolução 01:
 
-function ehPalindromo(string) {
-  let array = string.split("");
-  // console.log(string);
-  // console.log(array);
-  let arrayInverso = array.reverse();
-  // console.log(arrayInverso);
-  if (array === arrayInverso) {
-    // console.log(true);
-    return true;
-  } else {
-    // console.log(false);
-    return false;
-  }
+function ehPalindromo(palavra) {
+    let inverte = [];
+    for (let index = palavra.length -1; index >= 0; index -=1) {
+       
+        inverte.push(palavra[index])
+        console.log(inverte);
+    }
+
+
 }
-console.log(ehPalindromo("ana"));
+console.log(ehPalindromo("camarao"));
