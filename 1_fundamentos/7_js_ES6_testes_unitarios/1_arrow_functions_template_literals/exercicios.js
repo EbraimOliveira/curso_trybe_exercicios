@@ -25,21 +25,53 @@
 // Utilize template literals para que a chamada console.log(<seu código>oddsAndEvens<seu código>); retorne a frase "Os números 2,3,4,7,10,13 se encontram ordenados de forma crescente!".
 // Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort(). Spoiler: É possível realizar uma função que ordene qualquer array de números.
 
-let oddsAndEvens = [13, 3, 4, 10, 7, 2];
-let arrayOrdenado = oddsAndEvens.sort((a,b) => a -b);
+
+const ordenaArray = (array) => {
+let arrayOrdenado = array.sort((a,b) => a -b);
 let viraString = arrayOrdenado.toString();
 console.log(`Os números ${viraString} se encontram ordenados de forma crescente!`); 
+}
+ordenaArray([13, 3, 4, 10, 91, -8]);
 
 
 // PARTE II
-
-
 
 // 1 - Crie uma função que receba um número e retorne seu fatorial.
 // Na matemática, o fatorial de um número inteiro e positivo N, representado por N!, é o produto de todos os seus antecessores até o número um. Exemplo: 4! = 4 * 3 * 2 * 1 = 24.
 // Bônus (opcional): tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
 
+// método A
+
+function fatorial(numero) {
+let resultado = numero;
+for (let i = 1; i < numero; i+= 1) {
+    resultado *= i;
+  }
+  console.log(resultado);
+}
+fatorial(4);
+
+// método B
+
+function recursiveFatorial(numero) {
+  if(numero ===0){
+    return 1;
+  }
+  else {
+    return numero * recursiveFatorial(numero -1);
+  }
+}
+console.log (recursiveFatorial(4))
+
+// método C
+
+const fatorialTernary = (numero) => numero > 1 ? numero * fatorialTernary(numero -1) : 1;
+console.log(fatorialTernary(5))
+
+
 // 2 - Crie uma função que receba uma frase e retorne a maior palavra.
+
+// const palavraMaior = (frase) => {}
 
 // 3 - Crie uma página com um contador de cliques
 // Sua página deve conter:
@@ -47,7 +79,7 @@ console.log(`Os números ${viraString} se encontram ordenados de forma crescente
 // Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
 // Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada.
 
-// 3 - Crie duas funções JavaScript com as seguintes especificações:
+// 4 - Crie duas funções JavaScript com as seguintes especificações:
 // Não se esqueça de usar template literals
 // Função 1: Escreva uma função que substitua a letra 'x' em uma frase.
 // A função deverá receber um nome por parâmetro;
