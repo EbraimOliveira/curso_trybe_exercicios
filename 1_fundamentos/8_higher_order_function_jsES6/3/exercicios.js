@@ -98,4 +98,25 @@ const oldBooksOrdered = (array) => {
 const nameOrder = (array) =>
     array.filter((book) =>
         book.genre === 'Fantasia' || book.genre === 'Ficção Científica'
-    ).map((book) => book.author.name).sort();
+    ).map((oldBook) => oldBook.author.name).sort();
+
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const oldBooks = (listOfBook) => {
+    const currentYear = new Date().getFullYear();
+    return listOfBook.filter((book) => book.releaseYear < currentYear - 60)
+        .map((oldBookName) => oldBookName.name)
+}
+
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais(terminam com um ponto).
+
+const treePointBook = (bookList) =>
+    bookList.find((book) =>
+        book.author.name[1] === '.' &&
+        book.author.name[4] === '.').name
+console.log(treePointBook(books));
+
+
+
